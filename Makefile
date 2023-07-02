@@ -1,2 +1,5 @@
+CC_FLAGS    := -Wall
+SOURCES     := $(wildcard src/*.c)
+
 default:
-	gcc -Wall -o clox main.c .\chunk.c .\debug.c .\value.c .\vm.c && .\clox
+	gcc $(CC_FLAGS) -o clox $(SOURCES) 
