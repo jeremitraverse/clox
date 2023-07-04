@@ -12,10 +12,10 @@ void compile(const char* source) {
             printf("%4d", token.line);
             line = token.line;
         } else {
-            printf("    | ");
+            printf("   |");
         }
 
-        printf("%2d '%.*s'\n", token.type, token.length, token.start);
+        printf("%5d '%.*s'\n", token.type, token.length, token.start);
 
         if (token.type == TOKEN_EOF) break;
     }
